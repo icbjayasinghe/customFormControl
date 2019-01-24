@@ -30,7 +30,7 @@ export class HmtInputComponent implements ControlValueAccessor {
   writeValue(value: any): void {
   //  console.log('value : ', value);
     const div = this.dropdown;
-    console.log('Div : ', div );
+    // console.log('Div : ', div );
     // this.renderer.setProperty(div, 'value', 'Sachithra');
     this.selectedCity1 = value;
     
@@ -49,10 +49,10 @@ export class HmtInputComponent implements ControlValueAccessor {
   }
 
   change( event ){
-    console.log('Event ', event);
-   this.onChange(event.value)
-  //  const div = this.dropdown;
-  //   console.log('Div 1: ', div );
+    //console.log('Event ', event);
+    this.onChange(event.value)
+    //  const div = this.dropdown;
+    //   console.log('Div 1: ', div );
   }
 
 

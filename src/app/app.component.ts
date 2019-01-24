@@ -21,7 +21,8 @@ export class AppComponent implements OnInit{
       title2: [{ "id": 5, "name": "Paris", "code": "PRS" }],
       title3: [''],
       title4: [''],
-      title5: [{ "id": 3, "name": "London", "code": "LDN" }]
+      title5: [{ "id": 3, "name": "London", "code": "LDN" }],
+      title6: [false]
     })
   }
   
