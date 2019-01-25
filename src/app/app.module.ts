@@ -12,6 +12,8 @@ import { DropdownComponent } from './dropdown/dropdown.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { InputSwitchComponent } from './input-switch/input-switch.component';
 import { RadioButtonComponent } from './radio-button/radio-button.component';
+import { CheckBoxComponent } from './check-box/check-box.component';
+import { CheckboxModule } from 'primeng/checkbox';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,8 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
     HmtInputComponent,
     DropdownComponent,
     InputSwitchComponent,
-    RadioButtonComponent
+    RadioButtonComponent,
+    CheckBoxComponent
   ],
   imports: [
     CommonModule,
@@ -30,7 +33,8 @@ import { RadioButtonComponent } from './radio-button/radio-button.component';
     FormsModule,
     BrowserModule,
     InputSwitchModule,
-    RadioButtonModule
+    RadioButtonModule,
+    CheckboxModule
   ],
   providers: [],
   bootstrap: [AppComponent]

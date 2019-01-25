@@ -1,4 +1,4 @@
-import { Component, OnInit, forwardRef, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, forwardRef, Input, ViewChild, Renderer2 } from '@angular/core';
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 export const RADIO_VALUE_ACCESSOR: any = {
@@ -21,10 +21,14 @@ export class RadioButtonComponent implements OnInit, ControlValueAccessor {
 
   selectedValue: any;
 
-  constructor() { }
+  constructor(private renderer : Renderer2) { }
 
-  writeValue(obj: any): void {
-    throw new Error("Method not implemented.");
+  writeValue(value: any): void {
+    const div = this.radioTag.nativeElement;
+    console.log('Div : ', this.radioTag );
+    // this.selectedValue = value;
+    //this.renderer.setProperty(div, 'value', value);
+    // console.log(value);
   }
   registerOnChange(fn: any): void {
     this.onChange = fn;
@@ -36,7 +40,7 @@ export class RadioButtonComponent implements OnInit, ControlValueAccessor {
     throw new Error("Method not implemented.");
   }
 
-  change( event ){
+  change( ){
     // console.log('Change Fn', event);
     console.log('Event ', this.selectedValue);
 
@@ -48,6 +52,7 @@ export class RadioButtonComponent implements OnInit, ControlValueAccessor {
   }
 
   ngOnInit() {
+    this.writeValue('val1')
   }
 
 }
