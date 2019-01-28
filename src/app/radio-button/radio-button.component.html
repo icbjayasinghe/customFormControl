@@ -1,2 +1,4 @@
-<p-radioButton name="groupname" value="val1" [(ngModel)]="selectedValue" (onClick)="change( )" label=" Option 1" #radioTag></p-radioButton>
-<p-radioButton name="groupname" value="val2" [(ngModel)]="selectedValue" (onClick)="change( )" label=" Option 2"></p-radioButton>
+<div >
+    <p-radioButton [name]="groupname" value="val1" [(ngModel)]="selectedValue" (onClick)="change()" label=" Option 1" id="radioTag" #radioTag [disabled]="disabled"></p-radioButton>
+    <p-radioButton [name]="groupname" value="val2" [(ngModel)]="selectedValue" (onClick)="change()" label=" Option 2" id="radioTag1" #radioTag1 [disabled]="disabled"></p-radioButton>
+</div>

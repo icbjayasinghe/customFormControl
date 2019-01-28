@@ -1,2 +1,2 @@
-<p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues"></p-checkbox>
-<p-checkbox name="groupname" value="val2" [(ngModel)]="selectedValues"></p-checkbox>
+<p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues" (onChange)="change( $event,cb1,true )" #cb1></p-checkbox>
+<p-checkbox name="groupname" value="val2" [(ngModel)]="selectedValues" (onChange)="change( $event,cb2,true )" #cb2></p-checkbox>

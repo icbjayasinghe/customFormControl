@@ -18,7 +18,7 @@ export class TextareaComponent implements OnInit, ControlValueAccessor {
   onChange;
 
   onTouched;
-  constructor( private renderer : Renderer2 ) { }
+  constructor( private renderer: Renderer2 ) { }
 
   ngOnInit() {
   }
@@ -33,7 +33,7 @@ export class TextareaComponent implements OnInit, ControlValueAccessor {
     this.onChange = fn;
   }
   registerOnTouched(fn: any): void {
-    //throw new Error("Method not implemented.");
+    // throw new Error("Method not implemented.");
     this.onTouched = fn;
   }
   setDisabledState?(isDisabled: boolean): void {
@@ -42,10 +42,10 @@ export class TextareaComponent implements OnInit, ControlValueAccessor {
     this.renderer[action](div, 'disabled');
   }
 
-  change( event ){
+  change( event ) {
     // console.log('Event ', event);
-   this.onChange(event.target.value)
+   this.onChange(event.target.value);
   }
-  
+
 
 }
